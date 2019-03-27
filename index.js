@@ -4,11 +4,8 @@ const request = require('request');
 const PORT = process.env.PORT || 1337;
 
 const GITHUB_AUTH_URL = 'https://github.com/login/oauth/access_token';
-// const GITHUB_AUTH_URL = 'https://requestinspector.com/inspect/01d70d7y8rpvv9ppdhg0p8sqd3';
-const GITHUB_CLIENT_ID = '14de362467e571d25b4f';	
-// const GITHUB_CLIENT_ID = process.env.GITHUB_CLIENT_ID;	
-const GITHUB_CLIENT_SECRET = '20d53c40e733adf314f5a8e2e74d41601e96cd61';
-// const GITHUB_CLIENT_SECRET = process.env.GITHUB_CLIENT_SECRET;
+const GITHUB_CLIENT_ID = process.env.GITHUB_CLIENT_ID;	
+const GITHUB_CLIENT_SECRET = process.env.GITHUB_CLIENT_SECRET;
 
 const app = express();
 app.use(express.json())
