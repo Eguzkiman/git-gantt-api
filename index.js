@@ -8,7 +8,7 @@ const GITHUB_CLIENT_ID = process.env.GITHUB_CLIENT_ID;
 const GITHUB_CLIENT_SECRET = process.env.GITHUB_CLIENT_SECRET;
 
 const app = express();
-app.use(express.json())
+app.use(express.json());
 
 app.post('/exchange_github_code', (req, res) => {
 	let code = req.body.code;
