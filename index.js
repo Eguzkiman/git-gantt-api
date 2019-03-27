@@ -1,5 +1,7 @@
 const express = require('express');
 const request = require('request');
+var cors = require('cors');
+
 
 const PORT = process.env.PORT || 1337;
 
@@ -9,6 +11,7 @@ const GITHUB_CLIENT_SECRET = process.env.GITHUB_CLIENT_SECRET;
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 app.post('/exchange_github_code', (req, res) => {
 	let code = req.body.code;
