@@ -6,9 +6,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "engines": {
+      "node": "11.12.0",
+      "npm": "6.9.0"
+    },
+    "scripts": {
+      "start": "node index.js",
+      "test": "node test.js"
+    },
   "author": "Eguzkiman",
   "license": "ISC",
   "description": ""
