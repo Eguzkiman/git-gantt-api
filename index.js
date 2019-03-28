@@ -13,7 +13,7 @@ const app = express();
 // app.use(express.json());
 app.use(cors());
 
-app.post('/github_callback', (req, res) => {
+app.git('/github_callback', (req, res) => {
 	let code = req.query.code;
 
 	if (!code) return res.status(400).send('code parameter is required');
