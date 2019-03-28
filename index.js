@@ -19,9 +19,9 @@ app.post('/exchange_github_code', (req, res) => {
 	if (!code) return res.status(400).send('code parameter is required');
 	
 	let body = JSON.stringify({
-		code,
 		client_id: GITHUB_CLIENT_ID,
-		client_secret: GITHUB_CLIENT_SECRET
+		client_secret: GITHUB_CLIENT_SECRET,
+		...req.body
 	});
 
 	let headers = {
